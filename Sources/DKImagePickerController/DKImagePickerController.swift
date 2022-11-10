@@ -770,10 +770,7 @@ open class DKImagePickerController: DKUINavigationController, DKImageBaseManager
     
     @available(iOS 13.0, *)
     public func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
-        if @available(iOS 13.0, *) {
-            return self.shouldDismissViaUserAction
-        }
-        return false
+        return self.shouldDismissViaUserAction
     }
     
     public func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
